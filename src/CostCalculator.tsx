@@ -33,7 +33,7 @@ export default function costCalculator({ priceOfSingleVMPerHour }: costCalculato
     <div>
       <h1>VM cost calculator</h1>
       <h3>Calculate the cost of your virtual machines</h3>
-        <p style={{marginTop: "-1rem", fontWeight: 200}}>(for light development/testing, assuming 24/7 usage)</p>
+        <p style={{marginTop: "-1rem", fontWeight: 200, fontSize: "0.9rem"}}>(for development/testing and production, assuming 24/7 usage)</p>
       <label htmlFor="vmNumber">Number of VMs:</label>
       <input
         type="text"
@@ -44,10 +44,10 @@ export default function costCalculator({ priceOfSingleVMPerHour }: costCalculato
       />
       <div className="resultBox">
         <h3>Cost summary</h3>
-        <p>Cost per hour: {costPerHour} $</p>
-        <p>Cost per day: {costPerDay} $</p>
-        <p>Cost per month: {costPerMonth} $</p>
-        <p>Cost per year: {costPerYear} $</p>
+        <p>Cost per hour: {costPerHour.toFixed(2)} $</p>
+        <p>Cost per day: {costPerDay.toFixed(2)} $</p>
+        <p>Cost per month: {costPerMonth.toFixed(2)} $</p>
+        <p>Cost per year: {costPerYear.toFixed(2)} $</p>
       </div>
     </div>
   );
